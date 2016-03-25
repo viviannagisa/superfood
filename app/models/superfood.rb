@@ -7,5 +7,6 @@ class Superfood < ActiveRecord::Base
 
     elements.each do |ele|
       puts ele.get.attribute
+    end
   end
 end
