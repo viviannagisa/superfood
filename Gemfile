@@ -51,8 +51,9 @@ group :development do
   gem 'mechanize'
   gem 'pry-rails'
   gem 'nokogiri'
-  group :production, :staging do
-    gem 'rails_12factor'
-  end
+end
+
+group :production, :staging do
+  gem 'rails_12factor'
 end
 
