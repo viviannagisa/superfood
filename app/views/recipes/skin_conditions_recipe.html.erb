@@ -1,0 +1,7 @@
+<ul>
+<% @recipe.each do |recipe| %>
+  <li><%= recipe.title %></li>
+<% end %>
+</ul>
+
+<%= paginate(@recipe) %>

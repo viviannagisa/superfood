@@ -1,0 +1,44 @@
+<section class="features restaurant-features-1 white-bg padding-120-125" id="our-speciality">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+        <div class="section-heading text-center">
+
+          <h2 class="heading-text"><%= @recipes.title %></h2>
+          <hr class="lines">
+          <p class="sub-heading"><!-- Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum --></p>
+
+        </div> <!-- /.section-heading -->
+      </div>
+    </div>  <!-- /.row -->
+    
+    <div class="content-half feature-style-half-content"> <!-- CONTENT ROW -->
+      <div class="container-half container-half-left cover-bg" style="background-image: url(<%= asset_path(@recipes.image) %>);"></div>
+      
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-sm-offset-6 col-md-offset-7">
+          <div class="feature-item text-center">
+
+            <i class="icon svg-sb-lunch icon-lg"></i>
+            <h3 class="title-text"><%= @recipes.title %></h3>
+            <p><%= @recipes.contents %></p>
+
+          </div>
+        </div>
+      </div>  <!-- /.row -->
+    </div> <!-- /END CONTENT ROW -->
+
+
+  </div>
+</section>
+
+
+
+<!-- <ul>
+
+  <li><%= @recipes.title %></li>
+  <li><%= asset_path(@recipes.image) %></li>
+  <li><%= @recipes.contents %></li>
+</ul> -->
+ 
+

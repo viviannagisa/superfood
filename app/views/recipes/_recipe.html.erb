@@ -1,0 +1,20 @@
+<div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-0 col-md-offset-2 col-sm-offset-1 mb35"> <!-- DISH ONE BLOCK -->
+  <div class="media post-preview secondary-color-bg" style="">
+    <div class="media-left">
+      <img src="<%= recipe.image %>" alt="" class="thumb">
+      <div class="post-type">アサイー</div>
+
+    </div>
+
+    <div class="media-body">
+
+      <p class="category"><%= recipe.category %></p>
+      <h5 class="title-text"><%= recipe.title %></h5>
+      <p><%= recipe.contents[1..30] %></p>
+      <p class="delivery-time"></p>
+      <%= link_to "/recipes/#{recipe.id}", {class: "link"} do %>
+        詳しく見る<i class="icon svg-arrow-carrot-2right icon-lg"></i>
+      <% end %>
+    </div>
+  </div>
+</div> <!-- /END DISH ONE BLOCK -->

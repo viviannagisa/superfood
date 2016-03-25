@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Superfoods</title>
+  <meta charset="utf-8">
+
+  <!-- TITLE OF SITE -->
+  <title>Nemo - Landing Page Template with Builder</title>
+
+  <!-- META DATA -->
+  <meta name="description" content="Ultimate all in one landing page template with drag and drop builder" />
+  <meta name="keywords" content="nemo, landing page, responsive, template, builder, drag and drop" />
+  <meta name="author" content="TemplateOcean">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- =========================
+  FAV AND TOUCH ICONS  
+  ============================== -->
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!--       <div class="header1">
+       <h1><a href="/">Superfood Recipe</a></h1>
+        <h3>スーパーフードってどうやって食べるの？</h3>
+        <div class="header2">
+          <div class="sign_out">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <a class="post" href='/recipe/new'>投稿する</a>
+          </div>
+          <div class="grid-6">
+              <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+              <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+              <%= link_to "マイページ", user_path(current_user) if current_user %>
+          </div>
+          </div>
+        </div>
+      </div>
+ -->
+ <!-- =========================
+     NAVBAR 
+============================== -->
+<div class="navbar navbar-nemo appear-onscroll navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nemo-navigation" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar icon-bar-top"></span>
+        <span class="icon-bar icon-bar-middle"></span>
+        <span class="icon-bar icon-bar-bottom"></span>
+      </button>
+
+      <!-- YOUR LOGO -->
+      <a class="navbar-brand" href="#">
+        <img src="<%= asset_path "logo.jpeg" %>" alt="">
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="nemo-navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#our-speciality">目的別</a></li>
+        <li><a href="#features">スーパーフード</a></li>
+        <li><a href="#reservation-order">レシピを投稿する</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%= yield %>
+
+<!-- =========================
+     FOOTER -1  
+============================== -->
+<footer class="footers footer-1">
+  <div class="container text-center">
+    
+    <p class="contact-help">Need any help?  <a href="#" data-toggle="modal" data-target="#myModal">Contact us now</a></p>
+
+    <ul class="socialize">
+      <li><a href="#">
+        <i class="icon svg-social-facebook-square"></i>
+      </a></li>
+
+      <li><a href="#">
+        <i class="icon svg-social-twitter-square"></i>
+      </a></li>
+
+      <li><a href="#">
+        <i class="icon svg-social-linkedin-square"></i>
+      </a></li>
+
+      <li><a href="#">
+        <i class="icon svg-social-googleplus-square"></i>
+      </a></li>
+
+      <li><a href="#">
+        <i class="icon svg-social-instagram-square"></i>
+      </a></li>
+    </ul>
+
+    <p class="copyright">&copy; <a href="#">TemplateOcean</a>, Some rights reserved.</p>
+  </div>
+</footer>
+  <!-- =========================
+       SCRIPTS 
+  ============================== -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>

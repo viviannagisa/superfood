@@ -1,0 +1,280 @@
+<!-- =========================
+     RESTAURANT HOME 
+============================== -->
+<section class="resraurant-description-1 content-half white-bg" id="home">
+  <div class="container-half container-half-left cover-bg pr30" style="background-image: url(<%=asset_path"superfood.jpg"%>
+  );"></div>
+  
+  <div class="container">
+  <div class="row">
+  <div class="col-md-6 col-md-offset-6 pl30">
+  
+  <h1 class="title-text">Superfood Recipe</h1>
+  <p class="sub-heading mb50">あなたにあったスーパーフードのレシピを見つけよう</p>
+
+
+  <a href="/recipes/recipes" class="btn btn-base btn-lg"><span> レシピを見る</span></a>
+  </div>
+  </div> <!-- /.row -->
+  </div>
+</section>
+
+<!-- =========================
+     SMALL TEXT SECTION 
+============================== -->
+<div class="small-content text-center secondary-bg">
+  <div class="container">
+  <div class="row">
+  <div class="section-heading  col-md-8 col-md-offset-2">
+  <h2 class="heading-text">What is superfood？</h2>
+  <hr class="lines">
+  <p class="sub-heading"></p>
+  <p class="text-big text-dark">栄養バランスに優れ、一般的な食品より栄養価が高い食品
+  あるいは、ある一部の栄養・健康成分が突出して多く含まれる食品です。<br>
+  一般的な食品とサプリメントの中間にくるような存在で、
+  料理の食材としての用途と健康食品としての用途をあわせもちます。 </p>
+  </div>
+  </div>  <!-- /.row -->
+  </div>
+</div>
+
+
+<!-- =========================
+     PHOTOGRAPHY FEATURES 
+============================== -->
+
+
+<section class="photography-features white-bg padding-125-75" id="features">
+  <div class="row">
+  <div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+  <div class="section-heading text-center">
+
+  <h2 class="heading-text">目的別に探す</h2>
+  <hr class="lines">
+  <p class="sub-heading">現在感じているお悩み別にピッタリなスーパーフードをチェックできます。</p>
+
+  </div> <!-- /.section-heading -->
+  </div>
+  </div>  <!-- /.row -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-8 col-md-offset-0 col-sm-offset-2 mb50"> <!-- SPEAKER GRID -->
+        <div class="img-hover-content img-scale">
+          <img src="<%= asset_path "skincare.jpg" %>" alt="" class="img-responsive">
+
+          <div class="overlay-content text-center">
+            <div class="img-intro">
+              <h3 class="title-text">お肌のコンディションを整えたい</h3>
+            </div>
+            <div class="img-desc">
+              <p>First mover advantage android bandwidth user experience. Iteration metrics startup marketing product management strategy stock iPad entrepreneur pitch prototype. </p>
+              <a href="/categories/skin_conditions" class="btn btn-md btn-trans">スーパーフードを見る</a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /END SPEAKER GRID -->
+
+      <div class="col-md-4 col-sm-8 col-md-offset-0 col-sm-offset-2 mb50"> <!-- SPEAKER GRID -->
+        <div class="img-hover-content img-scale">
+          <img src="<%= asset_path "health.jpg" %>" alt="" class="img-responsive">
+
+          <div class="overlay-content text-center">
+            <div class="img-intro">
+              <h3 class="title-text">カラダの調子を整えたい</h3>
+            </div>
+            <div class="img-desc">
+              <p>First mover advantage android bandwidth user experience. Iteration metrics startup marketing product management strategy stock iPad entrepreneur pitch prototype.  </p>
+              <a href="categories/health_conditions" class="btn btn-md btn-trans">スーパーフードを見る</a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /END SPEAKER GRID -->
+
+      <div class="col-md-4 col-sm-8 col-md-offset-0 col-sm-offset-2 mb50"> <!-- SPEAKER GRID -->
+        <div class="img-hover-content img-scale">
+          <img src="<%= asset_path "antiaging.jpg" %>" alt="" class="img-responsive">
+
+          <div class="overlay-content text-center">
+            <div class="img-intro">
+              <h3 class="title-text">アンチエイジングがしたい</h3>
+            </div>
+            <div class="img-desc">
+              <p>First mover advantage android bandwidth user experience. Iteration metrics startup marketing product management strategy stock iPad entrepreneur pitch prototype.  </p>
+              <a href="/categories/anti_aging" class="btn btn-md btn-trans">スーパーフードを見る</a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /END SPEAKER GRID -->
+
+    </div> <!-- /.row -->
+  </div>
+</section>
+
+<!-- =========================
+     FEATURED DISHES 
+============================== -->
+
+<section class="white-bg features restaurant-features-2  padding-120-90" id="features">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+  <div class="section-heading text-center">
+
+  <h2 class="heading-text">レシピ一覧</h2>
+  <hr class="lines">
+  <p class="sub-heading"><!-- Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum --></p>
+
+  </div> <!-- /.section-heading -->
+  </div>
+  </div>  <!-- /.row -->
+
+<div class="row">
+  <%= render :partial => "recipe", :collection => @recipes %>
+</div>
+
+
+
+
+  <!-- =========================
+      COURSE INSTRUCTORS 
+============================== -->
+<section class="course-instructors white-bg padding-120-75" id="course-instructors">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+        <div class="section-heading text-center">
+
+          <h2 class="heading-text">スーパーフード一覧</h2>
+          <hr class="lines">
+          <p class="sub-heading"><!-- User story ideate thought leader thought leader physical computing user centered design viral ship it earned media --></p>
+
+        </div> <!-- /.section-heading -->
+      </div>
+    </div>  <!-- /.row -->
+
+    <div class="row text-center">
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "maca.jpg" %>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">マカ</h4>
+            <p><!-- Twitter --></p>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "supururina.jpg" %>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">スピルリナ</h4>
+            <p><!-- AOL --></p>
+          </figcaption>
+        </figure>
+        
+      </div>
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "asai3.jpg" %>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">アサイー </h4>
+            <p><!-- Amazon --></p>
+          </figcaption>
+        </figure>
+        
+      </div>
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "ukon3.jpg" %>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">ウコン</h4>
+            <p><!-- Google --></p>
+          </figcaption>
+        </figure>
+        
+      </div>
+
+    </div> <!-- /.row -->
+
+    <div class="row text-center">
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "kinua.jpg" %>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">キヌア</h4>
+            <p><!-- Twitter --></p>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "chiaseed3.jpg" %>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">チアシード</h4>
+            <p><!-- AOL --></p>
+          </figcaption>
+        </figure>
+        
+      </div>
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "amani.jpg"%>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">アマニ</h4>
+            <p><!-- Amazon --></p>
+          </figcaption>
+        </figure>
+        
+      </div>
+
+      <div class="col-md-3 col-xs-6 p_lr45 mb40">
+
+        <figure class="intro-vio">
+          <div class="img-scale thumbnail-circle">
+            <img src="<%= asset_path "gojiberry.jpg"%>" alt="" class="img-responsive">
+          </div>
+          <figcaption>
+            <h4 class="title-text">ゴジベリー</h4>
+            <p><!-- Google --></p>
+          </figcaption>
+        </figure>
+        
+      </div>
+
+    </div>  <!-- /.row -->
+  </div>
+</section>
+
+
+  </div>
+</section>
+

@@ -1,0 +1,194 @@
+<!-- <div class="contents row">
+  <%= form_tag('/recipe/', method: :post) do %>
+    <h3>投稿する</h3>
+    <label>ニックネーム</label><br>
+      <input placeholder="Nickname" type="text" name="name"><br>
+    <label>タイトル</label><br>
+      <input placeholder="Title" type="text" name="title"><br>
+    <label>写真</label><br>
+      <input placeholder="Image Url" type="text" name="image"><br>
+    <label>レシピ内容</label><br>
+      <textarea cols="30" name="contents" placeholder"text" rows="10"></textarea>
+
+    <div class="category">
+      <label>カテゴリーの選択</label><br>
+      <select name="category">
+        <option value="skin_conditions">お肌のコンディションを整えたい</option>
+        <option value="health_conditions">カラダの調子を整えたい</option>
+        <option value="anti_aging">アンチエイジングがしたい</option>
+      </select>
+    </div>
+    
+
+
+    <input type="submit" value="SENT">
+  <% end %>
+</div> -->
+
+
+
+<!-- =========================
+     RESTAURANT HOME 
+============================== -->
+<section class="resraurant-order secondary-bg content-half padding-120-125" id="reservation-order">
+  <div class="container-half container-half-left cover-bg pr30" style="background-image: url(images/restaurant-1.jpg);"></div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pl30">
+        <div class="section-heading">
+
+          <h2 class="heading-text">レシピを投稿する</h2>
+          <hr class="lines">
+
+        </div> <!-- /.section-heading -->
+        
+        <div class="tab-content query-form">
+          <!-- RESERVATION FORM -->
+          <div role="tabpanel" class="tab-pane active" id="reservation">
+            <%= form_tag('/recipes/', method: :post) do %>
+              <div class="query-group">
+                <p><i class="icon svg-arrow-carrot-2right"></i> ニックネーム</p>
+                <div class="row">
+                  <div class="col-sm-6 form-group pr10">
+                    <input type="text" name="name" id="reservation-name" class="form-standard secondary-color-bg" placeholder="Nickname" type="text">
+                  </div>
+                </div>  <!-- /.row -->
+              </div> <!-- /.query-group -->
+
+              <div class="query-group">
+                <p><i class="icon svg-arrow-carrot-2right"></i> レシピのタイトル</p>
+                <div class="row">
+                  <div class="col-sm-6 form-group pr10">
+                    <input type="text" name="title" id="reservation-name" class="form-standard secondary-color-bg" placeholder="Title" type="text">
+                  </div>
+                </div>  <!-- /.row -->
+              </div> <!-- /.query-group -->
+
+              <div class="query-group">
+                <p><i class="icon svg-arrow-carrot-2right"></i> レシピの内容</p>
+                <div class="row">
+                  <div class="col-sm-6 form-group pr10">
+                    <textarea name="contents" id="reservation-name" class="form-standard secondary-color-bg" placeholder="Contents" ></textarea>
+                  </div>
+                </div>  <!-- /.row -->
+              </div> <!-- /.query-group -->
+
+              <div class="query-group">
+                <p><i class="icon svg-arrow-carrot-2right"></i> レシピの画像</p>
+                <div class="row">
+                  <div class="col-sm-6 form-group pr10">
+                    <input type="text" name="image" id="reservation-name" class="form-standard secondary-color-bg" placeholder="Image" type="text">
+                  </div>
+                </div>  <!-- /.row -->
+              </div> <!-- /.query-group -->
+
+              <div class="category">
+                <label>カテゴリーの選択</label><br>
+                <select name="category">
+                  <option value="skin_conditions">お肌のコンディションを整えたい</option>
+                  <option value="health_conditions">カラダの調子を整えたい</option>
+                  <option value="anti_aging">アンチエイジングがしたい</option>
+                </select>
+              </div>
+              <div class="query-group" style="margin-top: 20px;">
+                <button class="btn btn-base btn-lg"><span>投稿する</span></button>
+              </div>
+
+
+              <div class="result">
+                <p class="success-msg"><i class="icon svg-check icon-xs"></i> Thanks! Your message has been sent.</p>
+                <p class="error-msg"><i class="icon svg-close-circle icon-xs"></i> Sorry, Something went wrong!</p>
+              </div>
+            <% end %>
+          </div> <!-- /END RESERVATION FORM -->
+
+          <!-- FOOD ORDER -->
+          <div role="tabpanel" class="tab-pane" id="food-order">
+            <form action="#" class="food-order">
+              <ul class="order-list"></ul>
+
+              <div class="order-select-menu clearfix">
+                <div class="grid-select-dropdown">
+                  <div class="form-group select-dropdown">
+                    <select class="form-standard secondary-color-bg">
+                      <option value="volvo" data-price="150">Volvo ( $150 )</option>
+                      <option value="saab" data-price="150">Saab ( $150 )</option>
+                      <option value="mercedes" data-price="150">Mercedes ( $150 )</option>
+                      <option value="audi" data-price="150">Audi ( $150 )</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group grid-number">
+                  <input type="number" name="food-quantity" class="form-standard secondary-color-bg">
+                </div>
+
+                <button class="btn btn-base btn-rectangle btn-sm"><span>Add</span></button>
+              </div>
+
+              <div class="row get-food">
+                <div class="col-sm-6">
+                  <div class="radio-standard">
+                    <input type="radio" id="radio-food-pickup" name="get-food" value="Pickup">
+                    <label for="radio-food-pickup" class="">Pickup</label>
+                  </div>
+
+                  <div class="radio-standard">
+                    <input type="radio" id="radio-food-delivery" name="get-food" value="Delivery">
+                    <label for="radio-food-delivery" class="">Delivery</label>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="radio total-payment">
+                    <p>Total: <span>$<span id="payment-amount">100</span> USD</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="query-group">
+                <div class="row">
+                  <div class="col-sm-6 form-group pr10">
+                    <label class="sr-only" for="order-name">Your Name</label>
+                    <input type="text" id="order-name" class="form-standard secondary-color-bg" placeholder="Your Name">
+                  </div>
+
+                  <div class="col-sm-6 form-group pl10">
+                    <label class="sr-only" for="order-email">Your Email</label>
+                    <input type="email" id="order-email" class="form-standard secondary-color-bg" placeholder="Your Email">
+                  </div>
+
+                  <div class="col-sm-6 form-group pr10">
+                    <label class="sr-only" for="order-tel">Phone Number</label>
+                    <input type="tel" id="order-tel" class="form-standard secondary-color-bg" placeholder="Phone Number">
+                  </div>
+
+                  <div class="col-sm-6 form-group pl10">
+                    <div class="select-dropdown">
+                      <select class="form-standard secondary-color-bg">
+                        <option value="0" selected disabled>Payment Method</option>
+                        <option value="1">PayPal</option>
+                        <option value="2">Credit Card</option>
+                        <option value="3">Wire Transfer</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 form-group">
+                    <label class="sr-only" for="order-msg">Your Name</label>
+                    <input type="text" id="order-msg" class="form-standard secondary-color-bg" placeholder="Your Message">
+                  </div>
+                </div> <!-- /.row -->
+              </div>
+
+              <button class="btn btn-base btn-lg"><span>Order Your Food Now</span></button>
+
+              <div class="form-message mt30"></div>
+
+            </form>
+          </div> <!-- /END FOOD ORDER -->
+        </div>
+      </div>
+    </div> <!-- /.row -->
+  </div>
+</section>
