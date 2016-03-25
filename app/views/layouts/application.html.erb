@@ -40,7 +40,7 @@
           </div>
           </div>
         </div>
-      </div>
+      </di<%= link_to "ホームに戻る", root_path %> v>
  -->
  <!-- =========================
      NAVBAR 
@@ -56,8 +56,11 @@
       </button>
 
       <!-- YOUR LOGO -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/"> 
         <img src="<%= asset_path "logo.jpeg" %>" alt="">
+
+      
+     
       </a>
     </div>
 
@@ -66,7 +69,8 @@
         <li class="active"><a href="#home">Home</a></li>
         <li><a href="#our-speciality">目的別</a></li>
         <li><a href="#features">スーパーフード</a></li>
-        <li><a href="#reservation-order">レシピを投稿する</a></li>
+        <li><%= link_to "レシピ投稿",'/recipes/new' %></li>
+
       </ul>
     </div>
   </div>
